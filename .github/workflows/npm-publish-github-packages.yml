@@ -19,7 +19,7 @@ jobs:
       - run: npm test
       - name: Set up .npmrc with PAT
         run: |
-          echo "@cabal_se:registry=https://npm.pkg.github.com" > ~/.npmrc
+          echo "@cabalse:registry=https://npm.pkg.github.com/cabalse" > ~/.npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GEN_PAT_2025 }}" >> ~/.npmrc
 
   publish-gpr:
