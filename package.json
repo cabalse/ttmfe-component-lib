@@ -1,5 +1,5 @@
 {
-  "name": "ttmfe-component-lib",
+  "name": "@cabal_se/ttmfe-component-lib",
   "private": true,
   "version": "3.0.0",
   "type": "module",
@@ -11,6 +11,9 @@
   },
   "main": "./dist/ttmfe-component-lib.umd.cjs",
   "module": "./dist/ttmfe-component-lib.es.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
