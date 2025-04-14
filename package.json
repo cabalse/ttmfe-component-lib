@@ -1,6 +1,6 @@
 {
   "name": "@cabalse/ttmfe-component-lib",
-  "version": "8.0.0",
+  "version": "9.0.0",
   "type": "module",
   "exports": {
     ".": {
