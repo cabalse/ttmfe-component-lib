@@ -20,7 +20,7 @@ jobs:
       - name: Set up .npmrc with PAT
         run: |
           echo "@cabal_se:registry=https://npm.pkg.github.com" > ~/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.PAT_TOKEN }}" >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GEN_PAT_2025 }}" >> ~/.npmrc
 
   publish-gpr:
     needs: build
@@ -37,6 +37,6 @@ jobs:
       - run: npm ci
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.PAT_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.GEN_PAT_2025}}
       - name: Clean up .npmrc
         run: rm .npmrc
