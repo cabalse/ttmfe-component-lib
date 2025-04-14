@@ -35,4 +35,8 @@ jobs:
         run: npm version ${{ github.event.inputs.version }}
 
       - name: Push new version tag to repository
-        run: git push origin main --follow-tags
+        env:
+         TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+         git remote set-url origin https://x-access-token:${TOKEN}@github.com/${{ github.repository }}
+         git push origin main --follow-tags
