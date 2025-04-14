@@ -34,6 +34,12 @@ jobs:
       - name: Generate new version
         run: npm version ${{ github.event.inputs.version }}
 
+      - name: Test token access
+        env:
+         TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+         curl -s -H "Authorization: token ${TOKEN}" https://api.github.com/user
+
       - name: Push new version tag to repository
         env:
          TOKEN: ${{ secrets.GH_PAT }}
