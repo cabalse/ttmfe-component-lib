@@ -1,5 +1,5 @@
 {
-  "name": "@cabal_se/ttmfe-component-lib",
+  "name": "@cabalse/ttmfe-component-lib",
   "version": "8.0.0",
   "type": "module",
   "exports": {
