@@ -38,5 +38,3 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GEN_PAT_2025}}
-      - name: Clean up .npmrc
-        run: rm .npmrc
