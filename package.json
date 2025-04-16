@@ -1,6 +1,6 @@
 {
   "name": "@cabalse/ttmfe-component-lib",
-  "version": "12.2.2",
+  "version": "12.2.3",
   "type": "module",
   "main": "dist/ttmfe-component-lib.cjs.js",
   "module": "dist/ttmfe-component-lib.esm.js",
