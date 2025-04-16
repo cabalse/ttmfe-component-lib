@@ -1,3 +1,3 @@
-import Button from "./components/button";
+import TTMFEButton from "./components/ttmfe-button";
 
-export { Button };
+export { TTMFEButton };
