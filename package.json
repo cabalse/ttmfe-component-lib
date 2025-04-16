@@ -6,7 +6,7 @@
   "module": "dist/ttmfe-component-lib.esm.js",
   "exports": {
     ".": {
-      "import": "./src/ttmfe-component-lib.es.js",
+      "import": "./dist/ttmfe-component-lib.es.js",
       "require": "./dist/ttmfe-component-lib.umd.cjs"
     }
   },
