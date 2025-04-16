@@ -2,14 +2,14 @@
   "name": "@cabalse/ttmfe-component-lib",
   "version": "10.0.0",
   "type": "module",
+  "main": "dist/ttmfe-component-lib.cjs.js",
+  "module": "dist/ttmfe-component-lib.esm.js",
   "exports": {
     ".": {
       "import": "./dist/ttmfe-component-lib.es.js",
       "require": "./dist/ttmfe-component-lib.umd.cjs"
     }
   },
-  "main": "./dist/ttmfe-component-lib.umd.cjs",
-  "module": "./dist/ttmfe-component-lib.es.js",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },

@@ -13,8 +13,9 @@ export default defineConfig({
       entry: "./src/index.js",
       name: "MyReactCompLib",
       fileName: (format) => `ttmfe-component-lib.${format}.js`,
-      formats: ["es", "umd"],
+      formats: ["esm", "cjs", "es", "umd"],
     },
+    outDir: "dist",
     rollupOptions: {
       external: ["react", "react-dom"],
       output: {
