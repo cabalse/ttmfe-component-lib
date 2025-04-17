@@ -1,3 +1,5 @@
+import "./ttmfe-button.css";
+
 const TTMFEButton = ({ label, onClick }) => {
   return (
     <button
