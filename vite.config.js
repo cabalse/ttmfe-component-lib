@@ -1,13 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
-import autoprefixer from "autoprefixer";
+import dts from "vite-plugin-dts";
+import { peerDependencies } from "./package.json";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  // css: {
-  //   plugins: [tailwindcss(), autoprefixer()],
-  // },
+  plugins: [
+    react(),
+    dts({ exlude: ["**/*,stories.ts", "**/*.test.ts"] }),
+    tailwindcss(),
+  ],
+
   test: {
     globals: true,
     environment: "jsdom",
@@ -16,13 +19,13 @@ export default defineConfig({
   build: {
     lib: {
       entry: "./src/index.js",
-      name: "MyReactCompLib",
+      name: "ttmfe-component-lib",
       fileName: (format) => `ttmfe-component-lib.${format}.js`,
-      formats: ["esm", "cjs", "es", "umd"],
+      formats: ["es", "cjs", "esm", "umd"],
     },
     outDir: "dist",
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: Object.keys(peerDependencies),
       output: {
         globals: {
           react: "React",
