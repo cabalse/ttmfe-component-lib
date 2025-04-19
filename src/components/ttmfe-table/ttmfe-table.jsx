@@ -1,3 +1,5 @@
+import "./../components.css";
+
 const TTMFETabel = ({ columns, data }) => {
   return (
     <div className="ttmfe:flex ttmfe:flex-col">

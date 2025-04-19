@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 import TTMFEButton from "../ttmfe-button/ttmfe-button";
 
+import "./../components.css";
+
 const TTMFEModal = ({ title, open, closeLable, onClose, children }) => {
   const [isOpen, setIsOpen] = useState(open);
 
