@@ -3,6 +3,7 @@ import { useState } from "react";
 import TTMFEButton from "./components/ttmfe-button/ttmfe-button";
 import TTMFETextInput from "./components/ttmfe-text-input/ttmfe-text-input";
 import TTMFEModal from "./components/ttmfe-modal/ttmfe-modal";
+import TTMFETabel from "./components/ttmfe-table/ttmfe-table";
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -32,6 +33,14 @@ const App = () => {
             />
           </div>
         </TTMFEModal>
+        <TTMFETabel
+          columns={["A", "B", "C"]}
+          data={[
+            ["1", "2", "3"],
+            ["4", "5", "6"],
+            ["7", "8", "9"],
+          ]}
+        />
       </div>
     </div>
   );
