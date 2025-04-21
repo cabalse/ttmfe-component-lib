@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { forwardRef, useImperativeHandle, useState } from "react";
 
 import "./../components.css";
 
-const TTMFETextInput = ({ label, onChange }) => {
+const TTMFETextInput = forwardRef(({ label, onChange }, ref) => {
   const [value, setValue] = useState("");
 
   const handleChange = (event) => {
     onChange(event.target.value);
     setValue(event.target.value);
   };
+
+  useImperativeHandle(ref, () => ({
+    clear: () => setValue(""),
+  }));
 
   return (
     <input
@@ -19,6 +23,6 @@ const TTMFETextInput = ({ label, onChange }) => {
       onChange={handleChange}
     />
   );
-};
+});
 
 export default TTMFETextInput;
